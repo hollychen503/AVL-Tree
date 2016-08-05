@@ -397,7 +397,8 @@ class AvlTree<T extends Comparable<? super T>> {
               if(rightHeight >= leftHeight)
                   t = rotateWithLeftChild(t);            
               else
-                  t = doubleWithRightChild(t);
+                  //t = doubleWithRightChild(t);
+                  t = doubleWithLeftChild(t);
           }
       }
       else if (x.compareTo(t.element) > 0) {
@@ -409,7 +410,8 @@ class AvlTree<T extends Comparable<? super T>> {
               if(leftHeight >= rightHeight)
                   t = rotateWithRightChild(t);               
               else
-                  t = doubleWithLeftChild(t);
+                  t = doubleWithRightChild(t);
+                  //t = doubleWithLeftChild(t);
           }
       }
       /*
